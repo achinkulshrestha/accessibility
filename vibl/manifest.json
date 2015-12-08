@@ -1,0 +1,24 @@
+{
+    "name": "DevToolsPanel",
+    "version": "0.1",
+    "description": "A bare-bones example of communication between devtools and an inspected page",
+    "devtools_page": "devtools.html",
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "permissions": [
+        "tabs",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "browser_action": {
+      "default_icon": {
+        "19": "img/icon48.png",
+        "38": "img/icon48.png"
+      },
+      "default_popup": "popup.html"
+    },
+    "manifest_version": 2
+}
