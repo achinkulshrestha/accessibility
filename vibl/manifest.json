@@ -1,7 +1,7 @@
 {
-    "name": "DevToolsPanel",
+    "name": "Vibl",
     "version": "0.1",
-    "description": "A bare-bones example of communication between devtools and an inspected page",
+    "description": "Feedback tool to build accessible apps",
     "devtools_page": "devtools.html",
     "background": {
         "scripts": [
@@ -15,10 +15,11 @@
     ],
     "browser_action": {
       "default_icon": {
-        "19": "img/icon48.png",
-        "38": "img/icon48.png"
+        "38": "img/logo.png"
       },
       "default_popup": "popup.html"
     },
+    "options_page": "panel.html",
+    "content_security_policy": "script-src 'self'  'unsafe-eval'; object-src 'self'",
     "manifest_version": 2
 }

@@ -10,6 +10,7 @@
 		<!-- Scripts -->
 		<script src="js/jquery-2.1.4.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		<script src="js/Chart.min.js"></script>
 		<script src="popup.js"></script>
 
 		<!-- Cascading Style Sheets -->
@@ -17,44 +18,44 @@
 		<link href="css/custom.css" rel="stylesheet" media="screen">
 	</head>
 
-	<body>
+	<body class="popupBody">
 
-		<nav class="navbar navbar-default" role="navigation">
+		<nav class="navbar navbar-inverse">
 			<div class="navbar-header">
-				<img src="logo.png" class="img-responsive" alt="Cinque Terre" width="100" height="80">
+				&nbsp;
+				<img src="img/logo.png" class="img-responsive" alt="Cinque Terre"  style="display:inline;" width="60" height="40">
+				&nbsp;&nbsp;&nbsp;
+				<h5 style="display:inline;" class="text-muted"><em> Hi there! I am the make your application "Accessible" toolkit. </em></h5>
 			</div>
-			<p class="text-center small"> A feedback tool to help make apps more accessible for the visually impaired</p>
+
 		</nav>
 
 		<section>
 			<div>
-				<strong>Guideline for the day</strong>
+				<h3><strong>Guideline for the day</strong></h3>
 				<blockquote>
-					<p>Labels should only contain one labelable element.</p>
+					<p>Use Aria-Invalid to Indicate An Error Field. <a href="http://eyeccc.github.io/Web_accessibility/Guideline_page.html#aria21" target="_blank">ARIA_21</a></p>
 				</blockquote>
-				<link> Read more here</link>
+
 			</div>
-			<table class="table table-hover">
-				<thead>
-					<tr>
-						<th>Rule</th>
-						<th>Result</th>
-						<th>Ranking in real time</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Alt attribute missing</td>
-						<td bgcolor="#FF0000"></td>
-						<td>80% folks got it right!</td>
-					</tr>
-					<tr>
-						<td>Label present</td>
-						<td bgcolor="#00FF00"></td>
-						<td>80% folks got it right!</td>
-					</tr>
-				</tbody>
-			</table>
+			<div>
+				<h3 style="display:inline;"><strong>The Accessibility Meter</strong></h3>
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				<img src="img/meter.png" style="display:inline;"  width="70" height="60">
+			</div>
+			<div>
+				<p>Let's match you against other folks who share the same goal :), refresh rate is 24hrs</p>
+			</div>
+				<strong>You had missed some rules last time! :/</strong>
+				<p class="text-danger">How many people got right what you got wrong!</p>
+				<div align="center">
+						<canvas id="myChartFail" width="300" height="200"></canvas>
+					</br></div>
+				<strong>However, you nailed these rules in your last run! :D </strong>
+				<p class="text-success">How many people are as awesome as you are!</p>
+					<div align="center">
+						<canvas id="myChartPass" width="300" height="200"></canvas>
+					</div>
 		</section>
 
 	</body>

@@ -2283,7 +2283,9 @@ function sendObjectToDevTools(message) {
 chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
 
     if (message.tabId && message.content == "content_for_audit") {
-      var results = axs.Audit.run();
+      var auditConfig = new axs.AuditConfiguration();
+      auditConfig.showUnsupportedRulesWarning = false;
+      var results = axs.Audit.run(auditConfig);
       var report_message = axs.Audit.createReport(results);
       chrome.runtime.sendMessage({"action":"audit_report","results":results, "report":report_message}, function(message){});
     }
